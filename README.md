@@ -1,5 +1,4 @@
-# homepage_github.io
-自作のホームページ作りまっせ
-簡易的ながらページ遷移、プロフィールを古のページっぽく記載してみる
-当面プロフィール、リンクとか記載して日本語ページ、英語ページなどなど実装するぞ
-ページへのリンク:https://ms3nd3r.github.io/homepage/
+#ファイル移行作業で間違えました
+創作物はmainブランチにあります
+<a href="https://ms3nd3r.github.io/homepage/">ホームページへ行く</a>
+<a href="https://github.com/ms3nd3r/homepage">本当のホームページのコードが記載されている場所</a>
