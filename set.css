@@ -38,3 +38,7 @@ body {
     text-align:center;
     font-size: large;
 }
+
+ul{
+    list-style:none;
+}
