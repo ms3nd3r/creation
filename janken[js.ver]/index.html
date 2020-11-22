@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>じゃんけん！</title>
     <script>
+    var message = '';
     function battle(a,b){
-        n = a - b
+        n = a - b;
+        m = 'あなたは負けました…' ;           //グー(0)とパー(2)のときなど、敗北した時の処理のパターンを最初から入れておき、場合によってメッセージを変更
         if(n == -1 || n == 2){              //パー(2)とグー(0)のときなど、勝利した時の処理
-            return message = 'あなたの勝ちです！';
-        }else if(n == 0){
-            return message = 'あいこです！'     //パー(2)同士のときなど、あいこ時の処理
-        }else{
-            return message = 'あなたは負けました…'//グー(0)とパー(2)のときなど、敗北した時の処理
+                m = 'あなたの勝ちです！';
+            }else if(n == 0){
+                m = 'あいこです！'     //パー(2)同士のときなど、あいこ時の処理
+            }             
         }
+        return m;
     }
     var myhand = Math.floor(Math.random()*3);
     console.log(myhand) 
@@ -36,7 +38,7 @@
         }
     document.write('相手の手は'+enemyresult);
     battle(myhand,enemyhand);
-    document.write('<br>'+message);
+    document.write('<br>' + m);
     </script>
 </head>
 <body>
