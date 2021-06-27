@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>エモメーター</title>
+    <link rel="stylesheet" href="set.css">
+    <!-- <script type="text/javascript" src="test.js"></script> -->
+</head>
+<body>
+    <div>
+    <h1>Emotions/Meter</h1>
+    <h2>今日はどんな一日だった？</h2>
+    <hr>
+    <p>嬉しい：<input type="range" id="happySlider" min="0" max="100" step="1" value="0"><span id="msg1"></span>pts</p>
+    何があったの？<input type="text" size="50">
+    <p>楽しい：<input type="range" id="funSlider" min="0" max="100" step="1" value="0"><span id="msg2"></span>pts</p>
+    何があったの？<input type="text" size="50"> 
+    <p>泣いた：<input type="range" id="sadSlider" min="0" max="100" step="1" value="0"><span id="msg3"></span>pts</p> 
+    何があったの？<input type="text" size="50">
+    <p>怒った：<input type="range" id="angerSlider" min="0" max="100" step="1" value="0"><span id="msg4"></span>pts</p>
+    何があったの？<input type="text" size="50">
+
+        <script>    //jsファイル管理にするとエラー出ちゃうから直接入れてます、ごめんなさい
+            function inputChange(event){
+                msg1.innerText = happySlider.value;
+                msg2.innerText = funSlider.value;
+                msg3.innerText = sadSlider.value;
+                msg4.innerText = angerSlider.value;
+            }
+            
+            let happySlider = document.getElementById('happySlider');
+            happySlider.addEventListener('input', inputChange);
+            let msg1 = document.getElementById('msg1');
+
+            let funSlider = document.getElementById('funSlider');
+            funSlider.addEventListener('input', inputChange);
+            let msg2 = document.getElementById('msg2');
+
+            let sadSlider = document.getElementById('sadSlider');
+            sadSlider.addEventListener('input', inputChange);
+            let msg3 = document.getElementById('msg3');
+
+            let angerSlider = document.getElementById('angerSlider');
+            angerSlider.addEventListener('input', inputChange);
+            let msg4 = document.getElementById('msg4');
+        </script>
+
+    <hr>
+    <p>一日ポイント・<span id="msg5"></span>点,<span id="msg6"></span></p> <!--いい一日だったね！とかよく頑張った！とか点数に応じてポジティブな一言-->
+    <p>総評:<input type="text" size="100"><br>書くときのヒント・上に書いた4つの感情の内訳をもとにすると書きやすいよ！</p>
+    今日の感情をツイートする→<a href="https://twitter.com/share" class="twitter-share-button" 
+    data-url="【ページのURL】" data-text="（総評の部分）：こんな一日を過ごしていました。" data-via="【ユーザ名】" 
+    data-size="large" data-related="ms3nd3r" data-count="【カウント表示の種類】" 
+    data-hashtags="エモメーター">tweet</a>  <!--可能なら総評のテキストを持ってきてツイート出来るようにする-->
+    <script>//twitter用
+    !function(d,s,id)
+    {var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    </script>
+
+    <!-- OK何も考えずにとりあえず雛型をつくっておく -->
+    <!-- OK/主題を入れる -->
+    <!-- OK/スライダーを作る -->
+    <!-- OK/感情の数値を表示する -->
+    <!-- 結果によってコメントを変える -->
+    <!-- 共有ボタンとか作りたいね -->
+    </div>
+</body>
+</html>
