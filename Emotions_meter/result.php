@@ -8,9 +8,26 @@
 </head>
 <body>
     <?php
-    $souhyou=$_POST["souhyou"]
+    $souhyou=$_POST["souhyou"];
+    $hap = $_POST["happy"];
+    $fun = $_POST["fun"];
+    $sad = $_POST["sad"];
+    $ang = $_POST["anger"];
+    $pts = 0;
+    $goodComment = array("いい一日だったね！","今日は最高だ！","よく頑張ったね！");
+    $badComment = array("そういう日もある","明日はきっと良いことあるよ","お疲れ様です。")
     ?>
-    <p>一日ポイント・<span id="msg5"></span>点,<span id="msg6"></span></p> <!--いい一日だったね！とかよく頑張った！とか点数に応じてポジティブな一言-->
+    <p>今日は・・・</p><p id="msg5"><?php 
+        $pts = $hap+$fun-$sad-$ang;
+        $rnd = mt_rand(0,2);
+        if($pts>= 100){
+            print $goodComment[$rnd];
+        }elseif($pts<50){
+            print "イイ感じですね";
+        }else{
+            print $badComment[$rnd];
+        }
+    ?> <!--いい一日だったね！とかよく頑張った！とか点数に応じてポジティブな一言-->
     
     今日の感情をツイートする→<a href="https://twitter.com/share" class="twitter-share-button" 
     data-url="【ページのURL】" data-text="<?php print $souhyou ?>：こんな一日を過ごしていました。" data-via="【ユーザ名】" 
