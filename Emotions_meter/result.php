@@ -30,7 +30,7 @@
     ?> <!--いい一日だったね！とかよく頑張った！とか点数に応じてポジティブな一言-->
     
     今日の感情をツイートする→<a href="https://twitter.com/share" class="twitter-share-button" 
-    data-url="【ページのURL】" data-text="<?php print $souhyou ?>：こんな一日を過ごしていました。" data-via="【ユーザ名】" 
+    data-url="ここに授業用のドメインを入れる" data-text="<?php print $souhyou ?>：こんな一日を過ごしていました。" data-via="【ユーザ名】" 
     data-size="large" data-related="ms3nd3r" data-count="【カウント表示の種類】" 
     data-hashtags="エモメーター">tweet</a>  <!--可能なら総評のテキストを持ってきてツイート出来るようにする-->
     <script>//twitter用
