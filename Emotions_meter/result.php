@@ -19,16 +19,16 @@
     $pts = $hap+$fun-$sad-$ang;
         $rnd = mt_rand(0,2);
         if($pts>75){
-            $result= '$pts."点！！".$goodComment[$rnd]'; //この文字列を変数化
+            $result= $pts."点！！".$goodComment[$rnd]; //この文字列を変数化
             $day='goodDay';
         }elseif($pts>=25){
-            $result=  '$pts."。イイ感じですね"';
+            $result=  $pts."。イイ感じですね";
             $day='sosoDay';
         }else{
-            $result= '$pts."点です。".$badComment[$rnd]';
+            $result= $pts."点です。".$badComment[$rnd];
             $day='badDay';
         }
-    print '<div id=".$day.">';
+    print "<div id=".$day.">";//ここの挙動がおかしい
     print  '<p>今日は・・・</p><p id="msg5">';
     print $result;//上の変数    
 

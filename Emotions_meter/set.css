@@ -13,17 +13,17 @@ h2{
     padding: 10px 50px 100px 50px;
     background-color: rgb(255, 255, 255);    
 }
-.goodDay{
+div#goodDay{
     margin: 50px 20px;
     padding: 10px 50px 100px 50px;
     background-color: rgb(255, 242, 231);    
 }
-.sosoDay{
+div#sosoDay{
     margin: 50px 20px;
     padding: 10px 50px 100px 50px;
     background-color: rgb(240, 255, 243);    
 }
-.badDay{
+div#badDay{
     margin: 50px 20px;
     padding: 10px 50px 100px 50px;
     background-color: rgb(224, 245, 255);    
