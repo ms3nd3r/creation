@@ -12,10 +12,27 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
 <body>
+<?php
+  //カウント数が記録してあるファイルを読み書きできるモードで開く
+  $fp = fopen('count.dat', 'r+b');
+
+  //ファイルを排他ロックする
+  flock($fp, LOCK_EX);
+
+  //ファイルからカウント数を取得する
+  $count = fgets($fp);
+
+  //カウント数を1増やす
+  $count++;
+?>
     <form action="result.php" method="post">
     <div class="main">
     <h1>Emotions/Meter</h1>
     <h2>今日はどんな一日だった？</h2>
+    <div class="counter-area">
+    <!-- ファイルから取得したカウント数を表示する -->
+    <span class="access-count">このサイトは今まで<?php echo $count; ?>回利用されました！！！</span>
+  </div><!-- /.counter-area -->
     <hr>
     <p class="prm"  style="width:400px">嬉しい：<input class="mdl-slider mdl-js-slider" type="range" id="happySlider" min="0" max="100" step="1" value="0" name="happy"><span id="msg1"></span>pts<br>
     何があったか：<input type="text" size="50" name="txt1"></p>
@@ -56,7 +73,19 @@
     <input type="submit" value="今日一日のポイントを見たい、ツイートしたい人はこちら" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
     </div>
     </form>
+    <footer>製作:ms3nd3r <a href="https://github.com/ms3nd3r">GitHubプロフィールを見る</a><a href="https://ms3nd3r.github.io/homepage/">ホームページに移動する</a></footer>  
+<?php
+  //ポインターをファイルの先頭に戻す
+  rewind($fp);
 
-    
+  //最新のアクセス数をファイルに書き込む
+  fwrite($fp, $count);
+
+  //ファイルのロックを解除する
+  flock($fp, LOCK_UN);
+
+  //ファイルを閉じる
+  fclose($fp);
+?>
 </body>
 </html>

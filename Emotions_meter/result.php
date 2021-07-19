@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>結果発表/エモメーター</title>
     <link rel="stylesheet" href="set.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
 <body>
     <?php
@@ -32,6 +35,9 @@
             $msg='Bmsg';
         }
     print "<div id=".$day.">"; //結果によってCSSの指定を変更
+    print "<h1>Emotions/Meter</h1>";
+    print "<h2>今日はどんな一日だった？</h2>";
+    print "<hr>";
     print  '<p id="today">今日は・・・</p><p class="'.$msg.'">';
     print $result;//上の変数    
 
@@ -39,10 +45,12 @@
     <hr>
     <p>今日の感情をツイートする→<a href="https://twitter.com/share?url=http://r03isc2t751.sub.jp/Emotion_meter/&hashtags=エモメーター&text=<?php print $souhyou.":今日はこんな過ごし方で".$pts."点な一日でした。";?>"
     rel="nofollow"
-    target="_blank" class="twitter-share-button"  data-show-count="false">tweet</a>
+    target="_blank" class="twitter-share-button"  data-show-count="false" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Tweet</a>※Twitterに遷移します
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
     </p>
+    <a href="index.php" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">やり直す</a>
     </div>
-
+    <footer>製作:ms3nd3r／<a href="https://github.com/ms3nd3r">GitHubプロフィールを見る</a>／<a href="https://ms3nd3r.github.io/homepage/">ホームページに移動する</a></footer>
 </body>
 </html>
