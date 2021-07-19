@@ -73,7 +73,7 @@
     <input type="submit" value="今日一日のポイントを見たい、ツイートしたい人はこちら" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
     </div>
     </form>
-    <footer>製作:ms3nd3r <a href="https://github.com/ms3nd3r">GitHubプロフィールを見る</a><a href="https://ms3nd3r.github.io/homepage/">ホームページに移動する</a></footer>  
+    <footer>製作:ms3nd3r／<a href="https://github.com/ms3nd3r">GitHubプロフィールを見る</a>／<a href="https://ms3nd3r.github.io/homepage/">ホームページに移動する</a></footer>
 <?php
   //ポインターをファイルの先頭に戻す
   rewind($fp);

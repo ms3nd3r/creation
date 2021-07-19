@@ -75,6 +75,7 @@ footer{
     position: absolute;/*←絶対位置*/
     bottom: 0; /*下に固定*/
     font-size: larger;
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(119, 119, 119);
     color: white;
+    text-align: center;
 }
