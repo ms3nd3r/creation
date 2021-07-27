@@ -50,7 +50,8 @@
     
     </p>
     <a href="index.php" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">やり直す</a>
+    <div class="push"></div>
     </div>
-    <footer>製作:ms3nd3r／<a href="https://github.com/ms3nd3r">GitHubプロフィールを見る</a>／<a href="https://ms3nd3r.github.io/homepage/">ホームページに移動する</a></footer>
+    <footer>　　製作:ms3nd3r　　／　　<a href="https://github.com/ms3nd3r">GitHubプロフィールを見る</a>　　／　　<a href="https://ms3nd3r.github.io/homepage/">ホームページに移動する　　</a></footer>
 </body>
 </html>

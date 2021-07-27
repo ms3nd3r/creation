@@ -72,10 +72,13 @@ p.souhyou{
   }
 
 footer{
-    position: absolute;/*←絶対位置*/
-    bottom: 0; /*下に固定*/
     font-size: larger;
     background-color: rgb(119, 119, 119);
     color: white;
     text-align: center;
+    margin-top: 500px;
+}
+.footer,
+.push {
+  height: 50px;
 }
